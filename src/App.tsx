@@ -5,9 +5,10 @@ const client = new QueryClient();
 
 function App() {
   return (
-    <QueryClientProvider client={client}>
+    <><QueryClientProvider client={client}>
       <Counter />
     </QueryClientProvider>
+    </>
   );
 }
 

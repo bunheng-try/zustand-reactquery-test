@@ -1,3 +1,5 @@
+import { Button } from "@/components/ui/button";
+
 import { useCounterStore } from "../../../store/useCounterStore";
 import { useDogQuery } from "../hooks/useQuery";
 
@@ -9,7 +11,7 @@ export default function Counter() {
     <div style={{ padding: 20 }}>
       <h2>Zustand Counter</h2>
       <p>Count: {count}</p>
-      <button onClick={increment}>Increase</button>
+      <Button onClick={increment}>Increase</Button>
 
       <hr />
 
@@ -17,7 +19,7 @@ export default function Counter() {
       {isLoading ? <p>Loading...</p> : <img src={data?.message} width={200} />}
       
       <br />
-      <button onClick={() => refetch()}>Get new dog</button>
+      <Button onClick={() => refetch()}>Get new dog</Button>
     </div>
   );
 }
